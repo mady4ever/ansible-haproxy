@@ -1,0 +1,24 @@
+#---
+# haproxy for Jboss server's load balancing.
+# Ha-Proxy Config.
+private_link_haproxy_ip: "192.168.10.21"
+private_link_haproxy_http_port: "8080"
+private_link_haproxy_https_port: "8443"
+private_link_haproxy_load_balance_algo: "roundrobin"
+private_link_haproxy_server_timeout: "86400000"
+private_link_haproxy_connect_timeout: "86400000"
+private_link_haproxy_client_timeout: "86400000"
+private_link_haproxy_queue_timeout: "1000s"
+private_link_haproxy_max_connections: "45000"
+private_link_haproxy_proc_cores: "4"
+
+
+# JBoss Server's config settings.
+private_link_haproxy_jboss_server_one_ip: "192.168.10.22"
+private_link_haproxy_jboss_server_one_http_port: "8080"
+private_link_haproxy_jboss_server_one_https_port: "8443"
+
+private_link_haproxy_jboss_server_two_ip: "192.168.10.23"
+private_link_haproxy_jboss_server_two_http_port: "8080"
+private_link_haproxy_jboss_server_two_https_port: "8443"
+

@@ -2,8 +2,12 @@
 - name: Install haproxy from repo.
   yum: name=haproxy state=latest update_cache=yes
 
-- name: Copy haproxy.cfg to server.
-  copy: src=haproxy.cfg dest=/etc/haproxy/haproxy.cfg
+# Do not copy from files use templates to set the group_vars in haproxy.cnf.
+#- name: Copy haproxy.cfg to server.
+#  copy: src=haproxy.cfg dest=/etc/haproxy/haproxy.cfg
+
+- name: Copy haproxy template to server.
+  template: src=haproxy.cfg dest=/etc/haproxy/haproxy.cfg
 
 - name: Restart HaProxy.
   command: service haproxy restart
