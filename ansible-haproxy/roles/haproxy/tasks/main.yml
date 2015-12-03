@@ -1,0 +1,9 @@
+---
+- name: Install haproxy from repo.
+  yum: name=haproxy state=latest update_cache=yes
+
+- name: Copy haproxy.cfg to server.
+  copy: src=haproxy.cfg dest=/etc/haproxy/haproxy.cfg
+
+- name: Restart HaProxy.
+  command: service haproxy restart

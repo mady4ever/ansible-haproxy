@@ -1,0 +1,7 @@
+---
+
+- hosts: ha-proxy
+  remote_user: root
+
+  roles:
+    - haproxy

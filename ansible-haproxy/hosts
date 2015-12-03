@@ -1,0 +1,2 @@
+[ha-proxy]
+192.168.10.11 ansible_user=root ansible_ssh_pass=Nbv12345
